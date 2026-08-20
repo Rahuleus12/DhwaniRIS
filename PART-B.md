@@ -9,7 +9,8 @@ app:
         memory:256M
 ```
 
-The application restarts as the limit of 256M causes the app to stop and restart. This is also the reason for lack of anything unusual or warnings in the logs. The key would be in the container journalctl logs.
+The application restarts as the limit of 256M causes the app to run out of memory, to stop and restart. This is also the reason for lack of anything unusual or warnings in the logs. The key would be in the container journalctl logs.
+
 To confirm this i would run
 
 ```
@@ -19,7 +20,7 @@ journalctl -k --grep='oom|Killed process'                                       
 docker stats --no-stream   # repeated over hours: watch RSS climb toward 256MiB
 ```
 
-The fix would be to increase the limit to 1G, since it goes down 3 times it should provide enough memory to be stable.
+The fix would be to increase the limit to 1G, since it goes down 3 times this should provide enough memory to be stable.
 
 S2(Server reboot caused data loss):
 docker-compose.yml-line 11
