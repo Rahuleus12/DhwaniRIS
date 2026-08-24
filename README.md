@@ -99,8 +99,10 @@ not worth the extra complexity.
      worked. Write this after you've built and tested the stack, from
      real experience. An honest "the healthcheck kept passing before
      InnoDB was actually ready so I ..." is exactly what is wanted. -->
+     recording and uploading was awkward and so was not letting ai paint my opinions at all times.
 
 ## Recording
 
 <!-- TODO(rahul): unlisted YouTube or Google Drive link goes here.
      Confirm it opens in a private browser window before submitting. -->
+https://youtu.be/S-zmy3MMv8s

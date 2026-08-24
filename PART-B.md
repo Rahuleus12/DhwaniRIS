@@ -20,7 +20,7 @@ journalctl -k --grep='oom|Killed process'                                       
 docker stats --no-stream   # repeated over hours: watch RSS climb toward 256MiB
 ```
 
-The fix would be to increase the limit to 1G, since it goes down 3 times this should provide enough memory to be stable.
+The fix would be to increase the limit to 1.2G, since it goes down 3 times this should provide enough memory to be stable.
 
 S2(Server reboot caused data loss):
 docker-compose.yml-line 11
